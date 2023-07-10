@@ -41,6 +41,18 @@ for (let i = 1; i <= n; i++) {
 }
 console.log(string);
 
+
+
+let text = ""
+let i = 0;
+
+do {
+    text +=  + i;
+    i++;
+    console.log(text);
+}
+while (i < 10);
+
 /*
 Check if a string contains the letter “y”. Print “yes” if it does and “no” if it does not.
 let x = "don’t know why"
