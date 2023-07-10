@@ -51,7 +51,7 @@ do {
     i++;
     console.log(text);
 }
-while (i < 10);
+while (i < 8);
 
 /*
 Check if a string contains the letter “y”. Print “yes” if it does and “no” if it does not.

@@ -7,22 +7,23 @@ equal or between 80 and 89 ===> B
 equal or between 90 and 100 ===> A
 */
 
-let avg = 50
+let avg = prompt('what is your rate ?')
 
-if (avg > 90) {
-    console.log('a');
-} else if (avg > 80) {
-    console.log('b');
+if (avg >= 90) {
+    alert('a')
+} else if (avg >= 80) {
+    alert('b')
 }
-else if (avg > 70) {
-    console.log('c');
+else if (avg >= 70) {
+    alert('c')
 }
-else if (avg > 60) {
-    console.log('d');
+else if (avg >= 60) {
+    alert('d')
 }
-else if (avg > 50) {
-    console.log('e');
+else if (avg >= 50) {
+    alert('e')
 }
 else {
-    console.log('fail');
+    alert('fail')
 }
+
