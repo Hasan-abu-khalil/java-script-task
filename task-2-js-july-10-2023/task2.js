@@ -24,5 +24,5 @@ else if (avg > 50) {
     console.log('e');
 }
 else {
-    console.log('f');
+    console.log('fail');
 }
