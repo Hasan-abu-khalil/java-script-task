@@ -3,10 +3,14 @@
 /******* Start Your Code *********/
 
 let num1 = 100
-let num2 = 99
-let num3 = num1 + num2
-console.log(num3);
-
+let num2 = 50
+if (num1 > num2) {
+    console.log(`${num1} largae then ${num2}`);
+} else if (num1 < num2) {
+    console.log(`${num1} smaller than ${num2} `);
+} else {
+    console.log(`${num1} equals ${num2}`);
+}
 
 /******* End Your Code ********* */
 
@@ -21,7 +25,7 @@ let num4 = 3
 let num5 = -7
 let num6 = 2
 
-let num7 = ((3 * -7) * 2)
+let num7 = (3 * -7 * 2)
 console.log(num7);
 
 
@@ -31,10 +35,16 @@ console.log(num7);
 Sample numbers : 0, -1, 4 
 Output : 4, 0, -1 */
 /******* Start Your Code *********/
-let arr = [0, -1, 4]
-arr.sort((a, b) => (a - b))
-arr.reverse()
-console.log(arr);
+let  l = 0, p = -1, k = 4
+
+
+if (l > p && l > k) {
+    console.log(`${l} ,${p}, ${k}`);
+} else if (p > l && p > k) {
+    console.log(`${p}, ${l}, ${k}`);
+} else {
+    console.log(`${k}, ${l}, ${p}`);
+}
 /******* End Your Code ********* */
 
 
