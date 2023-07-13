@@ -29,12 +29,12 @@ Ex: calculateDogAge(1);
 => "Your doggie is 7 years old in dog years!"
 */
 
-function calculateDogAge(num1, num2) {
-    let age = num1 * num2
+function calculateDogAge(num1,) {
+    let age = num1 * 7
     let result = `Your doggie is ${age} years old in dog years`
     console.log(result);
 }
-calculateDogAge(7, 2)
+calculateDogAge(2)
 
 
 /*
@@ -316,7 +316,7 @@ function shorterString(...str) {
 
     temp = str[0]
     for (let i = 0; i < str.length; i++) {
-        if (str[i].length < temp.length ) {
+        if (str[i].length < temp.length) {
             temp = str[i]
         }
     }
@@ -341,18 +341,18 @@ Ex: longerString("air","schoo","car","github")
 try all the cases (change the order of the longestString)
 */
 
-function longerString(...str){
+function longerString(...str) {
     temp = str[0];
-    for(let i = 0; i < str.length; i++) {
-        if(str[i].length > temp.length) {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].length > temp.length) {
             temp = str[i];
         }
     }
     console.log(temp);
 }
-longerString("air","school","car","by","github")
-longerString("air","schoo","car","github")
-longerString("air","schoo","car","github")
+longerString("air", "school", "car", "by", "github")
+longerString("air", "schoo", "car", "github")
+longerString("air", "schoo", "car", "github")
 /*
 15
 Write a function called isEven
@@ -367,10 +367,10 @@ Ex: isEven(2)
 
 */
 
-function isEven(n){
-    if(n % 2 == 0)
+function isEven(even) {
+    if (even % 2 == 0)
         return true
-    else    
+    else
         return false
 }
 console.log(isEven(4));
@@ -391,10 +391,10 @@ Ex: isOdd(5)
 
 */
 
-function isOdd(n){
-    if(n % 2 == 1)
+function isOdd(odd) {
+    if (odd % 2 == 1)
         return true
-    else    
+    else
         return false
 }
 console.log(isOdd(4));
@@ -413,11 +413,11 @@ Ex: positive(-5)
 => 5
 
 */
-function positive(n){
-    if(n<0)
-        return n*(-1)
+function positive(pos) {
+    if (pos < 0)
+        return pos * (-1)
     else
-        return n
+        return pos
 }
 console.log(positive(4));
 console.log(positive(-5));
@@ -434,7 +434,7 @@ Ex: fullName("Adam","McCallen")
 Ex: fullName("Alex", "Mercer")
 => "Alex Mercer"
 */
-function fullName(fname='',lname=''){
+function fullName(fname = '', lname = '') {
     console.log(fname + " " + lname);
 }
 fullName("Alex", "Mercer")
@@ -452,11 +452,11 @@ Ex: average(5,7,9,3,5)
 => 5.8
 
 */
-function average(n1,n2,n3,n4,n5){
-    console.log((n1+n2+n3+n4+n5)/5);
+function average(n1, n2, n3, n4, n5) {
+    console.log((n1 + n2 + n3 + n4 + n5) / 5);
 }
-average(1,2,3,4,5)
-average(5,7,9,3,5)
+average(1, 2, 3, 4, 5)
+average(5, 7, 9, 3, 5)
 
 /*
 20
@@ -472,7 +472,7 @@ Ex: randomNumber()
 => 0.475
 
 */
-function randomNumber(){
+function randomNumber() {
     console.log(Math.random())
 }
 randomNumber();
@@ -492,11 +492,11 @@ Ex: randomBetweenNumbers(3,100)
 => 23
 
 */
-function randomBetweenNumbers(start, end){
+function randomBetweenNumbers(start, end) {
     console.log(Math.random() * (start - end) + end)
 }
-randomBetweenNumbers(1,8);
-randomBetweenNumbers(3,100);
+randomBetweenNumbers(1, 8);
+randomBetweenNumbers(3, 100);
 
 /*
 22
@@ -518,20 +518,20 @@ Ex: scoreInUniversty(3)
 Ex: scoreInUniversty(71)
 => "C"
 */
-function scoreInUniversty(grade) {
-    if(grade >= 95 && grade <= 100){
+function scoreInUniversty(score) {
+    if (score >= 95 && grade <= 100) {
         console.log("A");
     }
-    else if(grade >= 85){
+    else if (score >= 85) {
         console.log("B");
     }
-    else if(grade >= 70){
+    else if (score >= 70) {
         console.log("C");
     }
-    else if(grade >= 50){
+    else if (score >= 50) {
         console.log("D");
     }
-    else{
+    else {
         console.log("F");
     }
 }
@@ -596,7 +596,7 @@ Ex: counter()
 => 1
 */
 
-function resetCounter(){
+function resetCounter() {
     console.log(--count);
 }
 resetCounter()
