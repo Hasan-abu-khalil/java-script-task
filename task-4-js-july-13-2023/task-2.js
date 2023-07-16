@@ -70,7 +70,7 @@ italic.addEventListener('change', (event) => {
     if (italic.checked == true) {
 
         result.style.fontStyle = `${event.target.value}`
-    } else {
+    } else  {
         result.style = 'font-style: normal;'
     }
 

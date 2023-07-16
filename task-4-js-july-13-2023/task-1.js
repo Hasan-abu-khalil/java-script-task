@@ -86,10 +86,6 @@ let num2 = ['nweum1', 'nweum2', 'nuwem3', 'nuwem4',]
 const cardContainer = document.getElementById("cardcontainer");
 
 
-
-
-
-
 function createCard(array, number) {
 
     for (let i = 0; i < 4; i++) {
