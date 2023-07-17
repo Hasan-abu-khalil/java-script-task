@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            background: red;
+            width: 150px;
+            height: 30px;
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            transition: all .3s;
+        }
+        button:hover{
+            background: gray;
+            color: red;
+        }
+        table{
+            width: 100%;
+            text-align: center;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        tr td{
+            border: 1px  solid #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <button id="button">click on me</button>
+    <table >
+        <thead >
+            <tr >
+                <th >Name</th>
+                <th >Age</th>
+                <th >major</th>
+                <th >universty</th>
+                <th  colspan="2" >image</th>
+                
+          </tr>
+        </thead>
+        <tbody id="tbody" ></tbody>
+
+    <script src="task.js"></script>
+</body>
+</html>

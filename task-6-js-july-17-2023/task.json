@@ -1,0 +1,27 @@
+{
+    "names": [
+        "hasan",
+        "yahya",
+        "hussam"
+    ],
+    "age": [
+        25,
+        28,
+        32
+    ],
+    "major": [
+        "web developer",
+        "renewable energy",
+        "Computer Engineering"
+    ],
+    "unvirsity": [
+        "Philadelphia",
+        "German",
+        "Philadelphia"
+    ],
+    "images": [
+        "img/Capture66.PNG",
+        "img/291402289_4927268187378264_8132534924549165711_n.jpg",
+        "img/279859336_5454277487949576_5040374936021043116_n.jpg"
+    ]
+}
