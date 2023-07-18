@@ -1,13 +1,12 @@
 
 const button = document.getElementById("button")
 const tbody = document.getElementById("tbody")
-const tr = tbody.value
+let table = ''
 
 const x = new XMLHttpRequest()
 x.open("GET", "task.json")
 
 button.onclick = function () {
-    let table;
     const json = JSON.parse(x.responseText)
 
 
@@ -26,7 +25,7 @@ button.onclick = function () {
         `
        
     }
-    tbody.innerHTML = table
+    tbody.innerHTML += table
 }
 x.send()
 
