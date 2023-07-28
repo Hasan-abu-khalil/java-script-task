@@ -2,10 +2,10 @@
 const fname = document.getElementById('fname')
 const lname = document.getElementById('lname')
 const date = document.getElementById('date')
-const email= document.getElementById('email')
-const conformemail= document.getElementById('conformemail')
-const password= document.getElementById('password')
-const conformpassword= document.getElementById('conformpassword')
+const email = document.getElementById('email')
+const conformemail = document.getElementById('conformemail')
+const password = document.getElementById('password')
+const conformpassword = document.getElementById('conformpassword')
 
 
 
@@ -19,16 +19,20 @@ const message7 = document.getElementById('message7')
 
 
 
-
+const rglname = /^[a-zA-Z]+$/;
+const rgfname = /^[a-zA-Z]+$/;
+const rgdate = /^[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}$/;
+const rgemail = /^[a-zA-Z0-9.]+@[a-zA-Z]+\.[a-zA-Z]{2,}/;
+const rgpassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
 
 fname.addEventListener("input", function () {
 
-    const rgfname = /^[a-zA-Z]+$/;
-    
-    if(rgfname.test(fname.value)){
+
+
+    if (rgfname.test(fname.value)) {
         message.innerHTML = ''
-    }else{
+    } else {
         message.innerHTML = "number are not allow"
 
     }
@@ -40,11 +44,9 @@ fname.addEventListener("input", function () {
 
 lname.addEventListener("input", function () {
 
-    const rglname = /^[a-zA-Z]+$/;
-    
-    if(rglname.test(lname.value)){
+    if (rglname.test(lname.value)) {
         message2.innerHTML = ''
-    }else{
+    } else {
         message2.innerHTML = "number are not allow"
     }
 
@@ -54,13 +56,40 @@ lname.addEventListener("input", function () {
 
 date.addEventListener("input", function () {
 
-    const rgdate = /^\d{4}-\d{2}-\d{2}$/;
 
-    if(rgdate.test(date.value)){
+    if (rgdate.test(date.value)) {
         message3.innerHTML = ''
-    }else{
-        message3.innerHTML = "the format should be dd/mm/yy"
-        
+    } else {
+        message3.innerHTML = "the format should be dd/mm/yyyy"
+
+    }
+
+});
+
+
+email.addEventListener("input", function () {
+
+
+    if (rgemail.test(email.value)) {
+        message4.innerHTML = ''
+    } else {
+        message4.innerHTML = 'the email is not vaild'
+
+    }
+
+});
+
+
+
+
+conformemail.addEventListener("input", function () {
+
+    if (conformemail.value == email.value) {
+        message5.innerHTML = ''
+
+    } else {
+        message5.innerHTML = 'the email is not vaild'
+
     }
 
 });
@@ -69,4 +98,29 @@ date.addEventListener("input", function () {
 
 
 
+password.addEventListener("input", function () {
 
+
+    if (rgpassword.test(password.value)) {
+        message6.innerHTML = ''
+
+    } else {
+        message6.innerHTML = 'the password is not matching 222'
+
+    }
+
+});
+
+
+
+
+conformpassword.addEventListener("input", function () {
+
+    if (conformpassword.value == password.value) {
+        message7.innerHTML = ''
+    } else {
+        message7.innerHTML = 'the password is not matching'
+
+    }
+
+});

@@ -1,6 +1,6 @@
 
 function color() {
-    var color = document.getElementById('color').value;
+    let color = document.getElementById('color').value;
     sessionStorage.setItem('color', document.body.style.backgroundColor = color);
 }
 
