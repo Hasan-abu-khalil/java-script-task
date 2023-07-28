@@ -29,6 +29,8 @@ addBtn.onclick = function () {
     showTask()
     addBtn.classList.remove('active')
 
+    
+
 }
 
 function showTask() {
@@ -41,7 +43,10 @@ function showTask() {
     }
     let newList = ''
     listArr.forEach((el, index) => {
-        newList += ` <li>${el} <span onclick="deleteTask(${index})" ><i class="fa-solid fa-trash"></i></span> <button onclick="upDate(this.value)">update</button></li>`
+        
+        newList += ` <li>${el} <span onclick="deleteTask(${index})" ><i class="fa-solid fa-trash"></i></span> <button onclick="editTask(${index})">Edit</button></li>`
+            
+        
     });
 
     toDo.innerHTML = newList
@@ -59,38 +64,17 @@ function deleteTask(index) {
 
 
 
-function upDate(i) {
-    
+function editTask(index) {
     let getlocalStorage = localStorage.getItem('new list')
-    listArr= JSON.parse(getlocalStorage)
-    
-    getlocalStorage[0]
-    inputBox.value = getlocalStorage[i]
-    console.log(getlocalStorage);
-    
-    // for (let i = 0; i < uplode.length; i++) {
-    //     inputBox.value = uplode[i]
-
-    // }
-
+    listArr = JSON.parse(getlocalStorage)
+    let editedTask = prompt("Edit task:", listArr[index])
+    if (editedTask !== null && editedTask.trim() !== '') {
+        listArr[index] = editedTask
+        localStorage.setItem('new list', JSON.stringify(listArr))
+        showTask()
+    }
 }
 
-// search.onkeyup = function (ss) {
-//     let ser = []
-//     let searchValue = search.value
-//     if (searchValue) {
-
-//         ser = listArr.filter(data =>{
-//             return data
-//         })
-//         .map(data => `<li>${data}</li>`).join('')
-//     }
-//     toDo.innerHTML
-
-//     console.log(toDo);
-
-
-// }
 
 
 
